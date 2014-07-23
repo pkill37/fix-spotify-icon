@@ -1,8 +1,13 @@
+#! /usr/bin/env bash
+
+set -e
+set -x
+
 # Variables
 current_dir=$(pwd)
 tmp_dir="/tmp/fsi"
 
-# Do stuff in a temporary directory
+# Do everything in a temporary directory
 mkdir $tmp_dir
 cd $tmp_dir
 
@@ -12,7 +17,7 @@ wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-i
 # Make a temporary copy of resources.zip
 cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
 
-# Extract it so we replace the icon
+# Extract it so we can replace the icon
 unzip resources_old.zip -d resources_old/
 
 # Replace the icon with a new one
