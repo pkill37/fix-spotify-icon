@@ -1,39 +1,62 @@
 #! /usr/bin/env bash
 
 set -e
-set -x
 
-# Variables
-current_dir=$(pwd)
-tmp_dir="/tmp/fsi"
+#############################################################################
+## Helpers & Config
+#############################################################################
 
-# Do everything in a temporary directory
-mkdir $tmp_dir
-cd $tmp_dir
+msg() {
+    tput setab 2 # green bg
+    tput setaf 7 # white text
+    echo ">>> $1"
+    tput sgr 0
+    sleep 1
+    exit 1
+}
 
-# Download icon
-wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/spotify_icon.ico
+tmp_dir="/tmp/fsi-$(date +%s)"
 
-# Make a temporary copy of resources.zip
-cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
+#############################################################################
+## Main Script
+#############################################################################
 
-# Extract it so we can replace the icon
-unzip resources_old.zip -d resources_old/
+main() {
+    clear
 
-# Replace the icon with a new one
-cp spotify_icon.ico resources_old/_linux/spotify_icon.ico
+    msg "Entering temporary directory"
+    mkdir $tmp_dir
+    cd $tmp_dir
 
-# Zip it back up
-cd resources_old/
-zip -r resources_patched.zip .
-cd ..
-mv resources_old/resources_patched.zip .
+    msg "Making a copy of resources.zip"
+    cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
+    unzip resources_old.zip -d resources_old/
 
-# Replace existing resources.zip with the patched version
-cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
+    msg "Downloading icon"
+    wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/spotify_icon.ico
 
-# Clean up
-rm -rf $tmp_dir
+    msg "Replacing the icon"
+    cp spotify_icon.ico resources_old/_linux/spotify_icon.ico
 
-# Return to previous directory
-cd $current_dir
+    msg "Packaging resources.zip back up"
+    cd resources_old/
+    zip -r resources_patched.zip .
+    cd ..
+    mv resources_old/resources_patched.zip .
+
+    msg "Replacing current resources.zip"
+    cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
+
+    msg "Cleaning up"
+    rm -rf $tmp_dir
+
+    msg "The Spotify icon has been replaced successfuly! Start Spotify again to check it out."
+    sleep 2
+    clear
+}
+
+#############################################################################
+## Bootstrap it
+#############################################################################
+
+main "$@"
