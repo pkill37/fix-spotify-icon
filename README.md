@@ -8,17 +8,17 @@ This script minimizes the pain with a simple `fix-spotify-icon` command that you
 
 1. Download the script using either `wget` or `curl`:
 
-```shell
+```bash
 $ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh
 ```
 
-```shell
+```bash
 $ curl -L -s -S https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh > fix-spotify-icon.sh
 ```
 
 2. `chmod` the script and move it:
 
-```shell
+```bash
 $ chmod +x fix-spotify-icon.sh
 $ sudo mv fix-spotify-icon.sh /usr/local/bin/fix-spotify-icon
 ```
@@ -27,6 +27,6 @@ $ sudo mv fix-spotify-icon.sh /usr/local/bin/fix-spotify-icon
 
 When the Spotify icon breaks you just have to run:
 
-```shell
+```bash
 $ fix-spotify-icon
 ```
