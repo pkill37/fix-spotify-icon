@@ -12,7 +12,6 @@ msg() {
     echo ">>> $1"
     tput sgr 0
     sleep 1
-    exit 1
 }
 
 tmp_dir="/tmp/fsi-$(date +%s)"
@@ -45,14 +44,13 @@ main() {
     mv resources_old/resources_patched.zip .
 
     msg "Replacing current resources.zip"
-    cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
+    sudo cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
 
     msg "Cleaning up"
     rm -rf $tmp_dir
 
     msg "The Spotify icon has been replaced successfuly! Start Spotify again to check it out."
     sleep 2
-    clear
 }
 
 #############################################################################
