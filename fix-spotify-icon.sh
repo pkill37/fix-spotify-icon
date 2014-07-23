@@ -21,8 +21,6 @@ tmp_dir="/tmp/fsi-$(date +%s)"
 #############################################################################
 
 main() {
-    clear
-
     msg "Entering temporary directory"
     mkdir $tmp_dir
     cd $tmp_dir
