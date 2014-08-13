@@ -4,7 +4,7 @@
 
 ![](https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/comparison.png)
 
-Since Ubuntu 14.04, Spotify uses a low resolution icon in the system tray. [You can replace the icon manually](http://askubuntu.com/questions/449392/how-to-fix-fuzzy-spotify-icon-in-the-icon-tray). But the icon is overwritten whenever Spotify updates. In other words, you have to fix the icon every time Spotify is updated. This script minimizes the pain with a simple one-line command.
+Since Ubuntu 14.04, Spotify uses a low resolution icon in the system tray. You can [replace the icon manually](http://askubuntu.com/questions/449392/how-to-fix-fuzzy-spotify-icon-in-the-icon-tray). But the icon is overwritten whenever Spotify updates. In other words, you have to fix the icon every time Spotify is updated. This script minimizes the pain with a simple one-line command.
 
 ## Quickstart
 
