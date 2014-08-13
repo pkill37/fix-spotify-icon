@@ -8,7 +8,7 @@ Since Ubuntu 14.04, Spotify uses a low resolution icon in the system tray. It's 
 
 ## Installation
 
-1. Download the script using either `wget` or `curl`:
+Download the script using either `wget` or `curl`:
 
 ```bash
 $ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh
@@ -18,7 +18,7 @@ $ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spot
 $ curl -L -s -S https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh > fix-spotify-icon.sh
 ```
 
-2. `chmod` the script and move it:
+`chmod` the script and move it:
 
 ```bash
 $ chmod +x fix-spotify-icon.sh
