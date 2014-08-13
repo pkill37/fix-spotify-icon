@@ -14,7 +14,7 @@ Run this one-liner to automagically **install and run the script**:
 $ wget --no-check-certificate http://bit.ly/fix-spotify-icon -O - | sh
 ```
 
-## Installation
+## Manual Installation
 
 Download the script:
 
