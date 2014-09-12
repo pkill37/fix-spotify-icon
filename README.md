@@ -16,18 +16,23 @@ $ wget --no-check-certificate http://bit.ly/fix-spotify-icon -O - | sh
 
 ## Manual Installation
 
-Download the script:
+1. Download the script:
 
-```bash
-$ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh
-```
+    ```bash
+    $ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh
+    ```
 
-`chmod` the script and move it:
+2. Make the script executable:
 
-```bash
-$ chmod +x fix-spotify-icon.sh
-$ sudo mv fix-spotify-icon.sh /usr/local/bin/fix-spotify-icon
-```
+    ```bash
+    $ chmod +x fix-spotify-icon.sh
+    ```
+
+3. Move the script:
+
+    ```bash
+    $ sudo mv fix-spotify-icon.sh /usr/local/bin/fix-spotify-icon
+    ```
 
 ## Usage
 
