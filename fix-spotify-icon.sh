@@ -29,11 +29,29 @@ main() {
     cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
     unzip resources_old.zip -d resources_old/
 
-    msg "Downloading icon"
-    wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/spotify_icon.ico
+    msg "Downloading icons"
+    wget -O spotify_icon.ico https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify_icon.ico
+    wget -O spotify-linux-16.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-16.png
+    wget -O spotify-linux-22.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-22.png
+    wget -O spotify-linux-24.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-24.png
+    wget -O spotify-linux-32.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-32.png
+    wget -O spotify-linux-48.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-48.png
+    wget -O spotify-linux-64.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-64.png
+    wget -O spotify-linux-128.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-128.png
+    wget -O spotify-linux-256.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-256.png
+    wget -O spotify-linux-512.png https://raw.githubusercontent.com/ammarx/fix-spotify-icon/master/spotify-linux-512.png
 
-    msg "Replacing the icon"
+    msg "Replacing the icons"
     cp spotify_icon.ico resources_old/_linux/spotify_icon.ico
+    cp spotify-linux-16.png resources_old/_linux/spotify-linux-16.png
+    cp spotify-linux-22.png resources_old/_linux/spotify-linux-22.png
+    cp spotify-linux-24.png resources_old/_linux/spotify-linux-24.png
+    cp spotify-linux-32.png resources_old/_linux/spotify-linux-32.png
+    cp spotify-linux-48.png resources_old/_linux/spotify-linux-48.png
+    cp spotify-linux-64.png resources_old/_linux/spotify-linux-64.png
+    cp spotify-linux-128.png resources_old/_linux/spotify-linux-128.png
+    cp spotify-linux-256.png resources_old/_linux/spotify-linux-256.png
+    cp spotify-linux-512.png resources_old/_linux/spotify-linux-512.png
 
     msg "Packaging resources.zip back up"
     cd resources_old/
