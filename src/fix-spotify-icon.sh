@@ -21,15 +21,15 @@ tmp_dir="/tmp/fsi-$(date +%s)"
 #############################################################################
 
 main() {
-    msg "Entering temporary directory"
+    msg "Entering temporary directory..."
     mkdir $tmp_dir
     cd $tmp_dir
 
-    msg "Making a copy of resources.zip"
+    msg "Making a copy of resources.zip..."
     cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
     unzip resources_old.zip -d resources_old/
 
-    msg "Downloading icons"
+    msg "Downloading icons..."
     wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify_icon.ico
     wget -O spotify-linux-16.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-16.png
     wget -O spotify-linux-22.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-22.png
@@ -41,7 +41,7 @@ main() {
     wget -O spotify-linux-256.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-256.png
     wget -O spotify-linux-512.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-512.png
 
-    msg "Replacing the icons"
+    msg "Replacing the icons..."
     cp spotify_icon.ico resources_old/_linux/spotify_icon.ico
     cp spotify-linux-16.png resources_old/_linux/spotify-linux-16.png
     cp spotify-linux-22.png resources_old/_linux/spotify-linux-22.png
@@ -53,19 +53,20 @@ main() {
     cp spotify-linux-256.png resources_old/_linux/spotify-linux-256.png
     cp spotify-linux-512.png resources_old/_linux/spotify-linux-512.png
 
-    msg "Packaging resources.zip back up"
+    msg "Packaging resources.zip..."
     cd resources_old/
     zip -r resources_patched.zip .
     cd ..
     mv resources_old/resources_patched.zip .
 
-    msg "Replacing current resources.zip"
+    msg "Replacing current resources.zip..."
     sudo cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
 
-    msg "Cleaning up"
+    msg "Cleaning up..."
     rm -rf $tmp_dir
 
-    msg "The Spotify icon has been replaced successfuly! Start Spotify again to check it out."
+    msg "The Spotify icon has been replaced successfuly!"
+    msg "Start Spotify again to check it out."
     sleep 2
 }
 
