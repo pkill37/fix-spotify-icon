@@ -2,7 +2,7 @@
 
 set -e
 
-wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/fix-spotify-icon.sh
+wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/fix-spotify-icon.sh
 
 chmod +x fix-spotify-icon.sh
 
