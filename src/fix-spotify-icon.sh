@@ -22,8 +22,8 @@ tmp_dir="/tmp/fsi-$(date +%s)"
 
 main() {
     msg "Entering temporary directory..."
-    mkdir $tmp_dir
-    cd $tmp_dir
+    mkdir "$tmp_dir"
+    cd "$tmp_dir"
 
     msg "Making a copy of resources.zip..."
     cp /opt/spotify/spotify-client/Data/resources.zip resources_old.zip
@@ -63,7 +63,7 @@ main() {
     sudo cp resources_patched.zip /opt/spotify/spotify-client/Data/resources.zip
 
     msg "Cleaning up..."
-    rm -rf $tmp_dir
+    rm -rf "$tmp_dir"
 
     msg "The Spotify icon has been replaced successfuly!"
     msg "Start Spotify again to check it out."
