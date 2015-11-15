@@ -11,7 +11,7 @@ Since Ubuntu 14.04, Spotify uses a low resolution icon in the system tray. You c
 Run this one-liner to automagically install and run the script:
 
 ```bash
-$ wget --no-check-certificate http://bit.ly/fix-spotify-icon -O - | sh
+$ sh -c "$(wget http://bit.ly/fix-spotify-icon -O -)"
 ```
 
 If you don't trust me you can inspect the source of the installation script and install it yourself.
