@@ -9,11 +9,9 @@ Spotify uses a green icon in the system tray, which is not in accordance with th
 ## Installation
 
 ```bash
-$ sh -c "$(wget https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/install.sh -O -)"
-```
-
-```bash
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/install.sh)"
+$ wget -O fix-spotify-icon.sh https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/fix-spotify-icon.sh
+$ chmod +x fix-spotify-icon.sh
+$ sudo mv fix-spotify-icon.sh /usr/local/bin/fix-spotify-icon
 ```
 
 ## Usage
