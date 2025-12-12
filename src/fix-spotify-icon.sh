@@ -30,16 +30,16 @@ main() {
     unzip resources_old.zip -d resources_old/
 
     msg "Downloading icons..."
-    wget -O spotify_icon.ico https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify_icon.ico
-    wget -O spotify-linux-16.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-16.png
-    wget -O spotify-linux-22.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-22.png
-    wget -O spotify-linux-24.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-24.png
-    wget -O spotify-linux-32.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-32.png
-    wget -O spotify-linux-48.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-48.png
-    wget -O spotify-linux-64.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-64.png
-    wget -O spotify-linux-128.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-128.png
-    wget -O spotify-linux-256.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-256.png
-    wget -O spotify-linux-512.png https://raw.githubusercontent.com/faviouz/fix-spotify-icon/master/src/images/spotify-linux-512.png
+    wget -O spotify_icon.ico https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify_icon.ico
+    wget -O spotify-linux-16.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-16.png
+    wget -O spotify-linux-22.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-22.png
+    wget -O spotify-linux-24.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-24.png
+    wget -O spotify-linux-32.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-32.png
+    wget -O spotify-linux-48.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-48.png
+    wget -O spotify-linux-64.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-64.png
+    wget -O spotify-linux-128.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-128.png
+    wget -O spotify-linux-256.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-256.png
+    wget -O spotify-linux-512.png https://raw.githubusercontent.com/pkill37/fix-spotify-icon/master/src/images/spotify-linux-512.png
 
     msg "Replacing the icons..."
     cp spotify_icon.ico resources_old/_linux/spotify_icon.ico
